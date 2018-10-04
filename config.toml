@@ -1,7 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "https://fritz.ninja/"
 languageCode = "en-us"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "Even - A super concise theme for Hugo"
+title = "Fritz - Ninja developer Blog"
 enableRobotsTXT = true
 enableEmoji = true
 theme = "even"
@@ -49,9 +49,9 @@ copyright = ""            # default: author.name
   since = "2018"            # Site creation time
 
   # site info (optional)
-  logoTitle = "Even"        # default: the title value
-  keywords = ["Hugo", "theme","even"]
-  description = "Hugo theme even example site."
+  logoTitle = "Fritz - Dev Blog"        # default: the title value
+  keywords = ["Fritz", "Jan Stevens","dev", "blog", "rails", "react"]
+  description = "Personal blog about development for Rails / React and Elixir"
 
   # paginate of archives, tags and categories
   archivePaginate = 5
