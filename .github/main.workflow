@@ -4,7 +4,8 @@ workflow "GitHub Pages" {
 }
 
 action "checkout-theme" {
-  uses = "chris-short/github-action-git-submodules@v0.1.0"
+  uses = "srt32/git-actions@master"
+  args = "cd themes && git clone https://github.com/luizdepra/hugo-coder.git"
 }
 
 action "is-branch-master" {
