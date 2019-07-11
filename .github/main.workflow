@@ -3,12 +3,19 @@ workflow "GitHub Pages" {
   resolves = ["deploy"]
 }
 
+action "checkout-theme" {
+  uses = "srt32/git-actions@master"
+  args = "cd themes && git clone https://github.com/luizdepra/hugo-coder.git"
+}
+
 action "is-branch-master" {
+  needs = "checkout-theme"
   uses = "actions/bin/filter@master"
   args = "branch master"
 }
 
 action "is-not-branch-deleted" {
+  needs = "checkout-theme"
   uses = "actions/bin/filter@master"
   args = "not deleted"
 }
@@ -27,4 +34,8 @@ action "deploy" {
     PUBLISH_BRANCH = "gh-pages"
   }
   secrets = ["ACTIONS_DEPLOY_KEY"]
+}
+
+workflow "New workflow" {
+  on = "push"
 }
