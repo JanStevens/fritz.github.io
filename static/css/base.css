@@ -1,0 +1,44 @@
+.emoji-ninja {
+  height: 3rem;
+}
+
+section.experience {
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #cdcdcd;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.experience .title h2 {
+  margin-top: 0;
+  font-size: 2.1rem;
+}
+
+.job,
+.education {
+  margin-bottom: 2.8rem;
+}
+
+.job .company,
+.education .location,
+.certification .name,
+.paper .name {
+  font-size: 2.0rem;
+  font-weight: 500;
+}
+
+.job .position,
+.education .grade,
+.certification .org {
+  font-size: 1.7rem;
+}
+
+.job .duration,
+.education .duration,
+.certification .date,
+.paper .date {
+  font-size: 1.5rem;
+}
