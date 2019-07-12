@@ -17,12 +17,7 @@ params:
   description: Jan Stevens's personal website
   keywords: 'blog,developer,fullstack,antwerp,ruby,rails'
   avatarurl: /img/portret.png
-  favicon_32: /img/favicon-32x32.png
-  favicon_16: /img/favicon-16x16.png
-  custom_css:
-    - /css/bootstrap-grid.min.css
-    - /css/base.css
-  hidecredits: false
+  hidecredits: true
   hidecopyright: false
   rtl: false
   math: true

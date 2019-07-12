@@ -1,3 +1,9 @@
+footer .container {
+  font-family: Lato, Helvetica, sans-serif;
+  opacity: 0.6;
+}
+
+
 .emoji-ninja {
   height: 3rem;
 }
@@ -13,13 +19,18 @@ section.experience {
 }
 
 .experience .title h2 {
-  margin-top: 0;
+  margin: 0 auto 1.6rem auto;
   font-size: 2.1rem;
+  text-transform: uppercase;
 }
 
 .job,
 .education {
   margin-bottom: 2.8rem;
+
+  .description {
+    margin-top: 1.5rem;
+  }
 }
 
 .job .company,
@@ -41,4 +52,9 @@ section.experience {
 .certification .date,
 .paper .date {
   font-size: 1.5rem;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    text-align: right;
+  }
 }
