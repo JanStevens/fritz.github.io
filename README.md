@@ -1,4 +1,4 @@
-# [fritz.ninja](https://fritz.ninja) · ![ninja](/static/img/ninja.png) · ![badge](https://action-badges.now.sh/JanStevens/fritz.github.io)
+# <a href="https://fritz.ninja">fritz.![ninja](/static/img/ninja.png)</a> · ![badge](https://action-badges.now.sh/JanStevens/fritz.github.io)
 
 Hello :wave:, welcome to my [personal website](https://fritz.ninja) soure code!
 
