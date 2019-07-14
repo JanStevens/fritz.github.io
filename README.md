@@ -8,7 +8,8 @@ When I push something to the master branch, GitHub Action compiles the static HT
 
 Apparently git submodules are not pulled so my first attempt tried to use an existing [action](https://github.com/chris-short/github-action-git-submodules), didn't work out well. So I ended up using a more generic git actions where I could easly cd into the theme directory and clone the hugo coder repository. Added bonus is that this also keeps my website on the latest version of the coder theme.
 
-The full work flow
+The full [workflow](.github/main.workflow)
+
 ```hcl
 workflow "GitHub Pages" {
   on = "push"
@@ -52,8 +53,6 @@ workflow "New workflow" {
   on = "push"
 }
 ```
-
-![flow](.github/main.workflow)
 
 ## Credits
 
