@@ -15,7 +15,7 @@ params:
   author: Jan Stevens
   info: Full Stack <img class="emoji-ninja" src="/img/ninja.png"></img> Developer
   description: Jan Stevens's personal website
-  keywords: 'blog,developer,fullstack,antwerp,ruby,rails'
+  keywords: 'blog,developer,fullstack,antwerp,ruby,rails,graphql,react'
   avatarurl: /img/portret.png
   hidecredits: true
   hidecopyright: false
