@@ -19,6 +19,7 @@ params:
   avatarurl: /img/portret.png
   hidecredits: true
   hidecopyright: false
+  colorscheme: auto
   rtl: false
   math: true
   social:
