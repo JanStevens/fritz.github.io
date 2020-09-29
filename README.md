@@ -6,52 +6,42 @@ This website runs on Github and uses a free cloudflare account (for SSL and cach
 
 When I push something to the master branch, GitHub Action compiles the static HTML and commits it to the gh-pages branch. This workflow is almost identical to the one described [here](https://github.com/peaceiris/actions-hugo) but I had to add a new action in front of it. 
 
-Apparently git submodules are not pulled so my first attempt tried to use an existing [action](https://github.com/chris-short/github-action-git-submodules), didn't work out well. So I ended up using a more generic git actions where I could easly cd into the theme directory and clone the hugo coder repository. Added bonus is that this also keeps my website on the latest version of the coder theme.
+Apparently git submodules are not pulled so my first attempt tried to use an existing [action](https://github.com/chris-short/github-action-git-submodules), didn't work out well. So I ended up using a more generic git actions where I could easily cd into the theme directory and clone the hugo coder repository. Added bonus is that this also keeps my website on the latest version of the coder theme. **Update** github actions now uses yaml files
+which greatly improve and reduce the complexity, the updated and simplified version:
 
 The full [workflow](.github/main.workflow)
 
-```hcl
-workflow "GitHub Pages" {
-  on = "push"
-  resolves = ["deploy"]
-}
+```yaml
+name: github pages
 
-action "checkout-theme" {
-  uses = "srt32/git-actions@master"
-  args = "cd themes && git clone https://github.com/luizdepra/hugo-coder.git"
-}
+on:
+  push:
+    branches:
+      - master
 
-action "is-branch-master" {
-  needs = "checkout-theme"
-  uses = "actions/bin/filter@master"
-  args = "branch master"
-}
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-action "is-not-branch-deleted" {
-  needs = "checkout-theme"
-  uses = "actions/bin/filter@master"
-  args = "not deleted"
-}
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.62.2'
+          extended: true
 
-action "build" {
-  needs = ["is-branch-master", "is-not-branch-deleted"]
-  uses = "peaceiris/actions-hugo@v0.55.6"
-  args = ["--gc", "--minify", "--cleanDestinationDir"]
-}
+      - name: Build
+        run: hugo --minify --gc --cleanDestinationDir
 
-action "deploy" {
-  needs = "build"
-  uses = "peaceiris/actions-gh-pages@v1.0.1"
-  env = {
-    PUBLISH_DIR = "./public"
-    PUBLISH_BRANCH = "gh-pages"
-  }
-  secrets = ["ACTIONS_DEPLOY_KEY"]
-}
-
-workflow "New workflow" {
-  on = "push"
-}
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
 ```
 
 ## Credits
