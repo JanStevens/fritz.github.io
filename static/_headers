@@ -1,0 +1,6 @@
+/*
+  X-Frame-Options: deny
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Access-Control-Allow-Origin: *
