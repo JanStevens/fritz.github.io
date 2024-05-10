@@ -34,7 +34,7 @@ params:
     - name: LinkedIn
       icon: fab fa-linkedin fa-2x
       weight: 3
-      url: 'https://www.linkedin.com/in/fritzhut/'
+      url: 'https://www.linkedin.com/in/jan-stevens-fritz'
 menu:
   main:
     - name: About
