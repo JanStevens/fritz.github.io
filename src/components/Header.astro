@@ -1,8 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { Image } from 'astro:assets';
 import * as about from '../pages/about/about.md';
-import profile from '../images/profile.png';
 ---
 
 <header class="mx-auto pt-12 pb-2 relative">
@@ -12,10 +10,10 @@ import profile from '../images/profile.png';
     <div
       class="flex-shrink-0 w-40 md:w-48 rounded-full shadow-sm overflow-hidden"
     >
-      <Image
+      <img
         alt="avatar"
         loading="eager"
-        src={profile}
+        src="/profile.webp"
         class="grayscale-[50] hover:grayscale-0 transition-all duration-300 ease-in"
       />
     </div>
