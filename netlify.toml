@@ -1,8 +1,0 @@
-[build]
-publish = "public"
-command = "hugo --minify --gc --cleanDestinationDir --baseURL $URL"
-
-[build.environment]
-HUGO_VERSION = "0.84.1"
-NODE_ENV = "production"
-NODE_VERSION = "16.2.0"
