@@ -8,9 +8,9 @@ const { title, icon } = Astro.props;
   <div class="collapse collapse-arrow ease-in-out duration-300">
     <input aria-label={title} type="checkbox" />
     <div class="collapse-title font-extrabold tracking-tight md:text-2xl">
-      <div class="flex">
+      <div class="flex items-center">
         <Icon name={icon} class="w-8 h-8 mr-4" />
-        {title}
+        <span>{title}</span>
       </div>
     </div>
     <div class="collapse-content">

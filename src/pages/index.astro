@@ -76,7 +76,7 @@ import { Icon } from 'astro-icon/components';
     >
     </div>
     <main
-      class="mx-auto flex-grow max-h-[90vh] md:max-h-[70vh] max-w-3xl overflow-y-scroll py-2 grid w-[95vw]"
+      class="mx-auto flex-grow max-h-[90vh] md:max-h-[70vh] max-w-3xl py-2 grid w-[95vw]"
     >
       <div class="container">
         <Container />
@@ -100,20 +100,17 @@ import { Icon } from 'astro-icon/components';
 
   @media only screen and (max-width: 480px) {
     * {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 
-  .overflow-y-scroll::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     width: 3px;
-  }
-
-  .overflow-y-scroll::-webkit-scrollbar-thumb {
-    background-color: oklch(var(--s));
-  }
-
-  .overflow-y-scroll {
     scrollbar-width: 1px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: oklch(var(--s));
   }
 
   @media (max-width: 768px) {
