@@ -1,9 +1,14 @@
 ---
-const { icon, url, url_name } = Astro.props;
-import { Icon } from 'astro-icon/components';
+const { icon, url, url_name, hide } = Astro.props;
+import { Icon } from "astro-icon/components";
 ---
 
-<a target="_blank" href={url} aria-label={url_name}>
+<a
+  target="_blank"
+  href={url}
+  aria-label={url_name}
+  class={hide ? `not-print:hidden` : "visible"}
+>
   <button class="btn btn-outline btn-md">
     <Icon name={icon} class="w-6 h-6" aria-label={url_name} />{url_name}
   </button>

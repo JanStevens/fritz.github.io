@@ -1,19 +1,23 @@
 ---
-import { Icon } from 'astro-icon/components';
-import BaseLayout from './BaseLayout.astro';
+import { Icon } from "astro-icon/components";
+import BaseLayout from "./BaseLayout.astro";
 const { title, icon } = Astro.props;
 ---
 
 <BaseLayout>
-  <div class="collapse collapse-arrow ease-in-out duration-300">
+  <div
+    class="collapse not-print:collapse-arrow ease-in-out duration-300 print:collapse-open break-inside-avoid"
+  >
     <input aria-label={title} type="checkbox" />
-    <div class="collapse-title font-extrabold tracking-tight md:text-2xl">
+    <div
+      class="collapse-title font-extrabold tracking-tight md:text-2xl print:pb-0"
+    >
       <div class="flex items-center gap-3 md:gap-4">
         <Icon name={icon} class="w-8 h-8" />
         <span>{title}</span>
       </div>
     </div>
-    <div class="collapse-content">
+    <div class="collapse-content print:m-0">
       <slot />
     </div>
   </div>

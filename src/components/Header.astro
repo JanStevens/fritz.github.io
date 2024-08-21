@@ -1,6 +1,6 @@
 ---
-import { Icon } from 'astro-icon/components';
-import * as about from '../pages/about/about.md';
+import { Icon } from "astro-icon/components";
+import * as about from "../pages/about/about.md";
 ---
 
 <header class="mx-auto pt-12 pb-2 relative px-4">
@@ -14,7 +14,7 @@ import * as about from '../pages/about/about.md';
         alt="avatar"
         loading="eager"
         src="/profile.webp"
-        class="grayscale-[50] hover:grayscale-0 transition-all duration-300 ease-in"
+        class="grayscale-[50] hover:grayscale-0 transition-all duration-300 ease-in print:grayscale-0"
       />
     </div>
 
@@ -34,14 +34,3 @@ import * as about from '../pages/about/about.md';
     </div>
   </article>
 </header>
-
-<style>
-  @media (max-width: 768px) {
-    .flex-col.justify-end {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-</style>
