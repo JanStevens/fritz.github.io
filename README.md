@@ -1,6 +1,6 @@
 Hello :wave:, welcome to my [personal website](https://janstevens.dev) soure code!
 
-This website runs on Github and uses a free cloudflare account (for SSL and caching) in front of it. Using Astro a statical HTML version is created from this source code (visible in the gh-pages branch) and deployed automatically with github actions to the gh-pages branch.
+This website runs on Github and uses a free cloudflare account (for SSL and caching) in front of it. Using Astro a statical HTML version is created from this source code and deployed automatically with github actions to github pages.
 
 ## Credits
 
