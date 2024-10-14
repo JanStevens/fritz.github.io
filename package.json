@@ -15,7 +15,7 @@
     "@fontsource-variable/dm-sans": "^5.0.7",
     "@iconify-json/carbon": "^1.1.37",
     "@iconify-json/mdi": "^1.1.68",
-    "astro": "^4.14.2",
+    "astro": "^4.16.3",
     "astro-compress": "^2.3.1",
     "astro-icon": "^1.1.1",
     "framer-motion": "^11.3.28",
