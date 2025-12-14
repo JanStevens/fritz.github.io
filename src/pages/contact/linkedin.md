@@ -1,5 +1,5 @@
 ---
-title: Linkedin
+title: LinkedIn
 icon: carbon:logo-linkedin
 url: https://www.linkedin.com/in/jan-stevens-fritz/
 ---

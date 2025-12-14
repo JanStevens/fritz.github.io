@@ -1,5 +1,5 @@
 ---
-title: Batchelor of Science (B.Sc), Electronics-ICT
+title: Bachelor of Science (B.Sc), Electronics-ICT
 location: AP Hogeschool Antwerpen, Belgium
 url: https://www.ap.be/opleiding/elektronica-ict
 institute: AP Hogeschool Antwerpen

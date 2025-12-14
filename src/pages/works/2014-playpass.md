@@ -3,7 +3,7 @@ title: Lead Rails / Elixir / React Developer
 date: Nov 2013 - Sep 2020
 url: https://weezevent.com/en-gb/playpass/
 location: Antwerp
-org: Playpass
+org: PlayPass
 tags: ['Ruby on Rails', 'Elixir', 'Lead Developer', 'React']
 ---
 
